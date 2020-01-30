@@ -1,38 +1,192 @@
-.App {
+:root {
+  --primary-color: #fdcb6e;
+  --default-trans: all 0.3s ease-out;
+}
+
+header{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.section-padding{
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section-header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section-header h2{
+  font-size: 2.6rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-header h2::after{
+  display: block;
+  content: "";
+  background-color: var(--primary-color);
+  width: 100px;
+  height: 2px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-content{
+  padding: 30px 70px;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+.header-content>*{
+  margin-bottom: 30px;
+}
+
+.header-content h1{
+  color: #FFF;
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.header-content h1::after{
+  content: "";
+  display: block;
+  background-color: var(--primary-color);
+  width: 200px;
+  height: 2px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.header-content h2{
+  color: #FFF;
+  font-weight: 100;
+}
+
+/**************Section Services************/
+#services{
+  background-color: #eee;
+}
+
+.service-item>*{
+  margin-bottom: 20px;
+}
+
+.service-item{
+  text-align: center;
+}
+
+.service-item i{
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+/************Section Featured**********/
+.room-item{
+  margin-bottom: 20px;
+}
+
+.room-item-desc{
+  padding: 5px;
+  padding-top: 10px;
+  background-color: #dfe6e9;
+  text-align: center;
+}
+
+.room-item-desc h4{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.room-item:hover .room-item-img::after{
+  height: 100%;
+}
+
+.room-item:hover .room-item-price{
+  opacity: 0;
+}
+
+.room-item:hover .room-item-util{
+  opacity: 1;
+}
+
+.room-item-img{
+  position: relative;
+}
+
+.room-item-img::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: rgba(0,0,0,0.5);
+  content: "";
+  transition: var(--default-trans);
+}
+
+.room-item-price{
+  display: inline-block;
+  padding: 5px;
+  background-color: rgba(0,0,0,0.7);
+  color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transition: var(--default-trans);
+}
+
+.room-item-util{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  transition: var(--default-trans);
+}
+
+/***********Section room details************/
+#room-details h4{
+  margin-bottom: 20px;
+}
+
+#room-details .row{
+  margin-bottom: 30px;
+}
+
+#room-details .row:last-child div:last-child ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+#room-details .row:last-child div:last-child ul li{
+  width: 33%;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#room-details .row:last-child div:nth-child(2) ul{
+  list-style-type: none;
+}
+
+#room-details .row:last-child div:nth-child(2) ul li{
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+#room-search-form .row{
+  justify-content: space-between;
+}
+
+#room-search-form .row div {
+  width: 15%;
 }
