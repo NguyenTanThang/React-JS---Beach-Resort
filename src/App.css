@@ -184,7 +184,7 @@ header{
 }
 
 #room-search-form .row{
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #room-search-form .row div {
@@ -192,14 +192,14 @@ header{
 }
 
 /*********Responsive**********/
-@media (min-width: 320px) and (max-width: 767px){
+@media (min-width: 768px) and (max-width: 1024px){
   #room-search-form .row div {
-    width: 20%;
+    width: 30%;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px){
   #room-search-form .row div {
-    width: 100%;
+    width: 80%;
   }
 }
