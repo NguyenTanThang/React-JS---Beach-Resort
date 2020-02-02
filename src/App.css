@@ -192,8 +192,14 @@ header{
 }
 
 /*********Responsive**********/
-@media screen and (min-width: 320px) and (max-width: 767px){
+@media (min-width: 320px) and (max-width: 767px){
   #room-search-form .row div {
-    width: 50%;
+    width: 20%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  #room-search-form .row div {
+    width: 100%;
   }
 }
