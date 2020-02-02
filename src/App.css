@@ -196,10 +196,22 @@ header{
   #room-search-form .row div {
     width: 30%;
   }
+
+  #room-search-form .row div:last-child {
+    margin-top: 30px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px){
   #room-search-form .row div {
     width: 80%;
+  }
+
+  .header-content h1{
+    font-size: 3rem;
+  }
+
+  .header-content{
+    padding: 50px 20px;
   }
 }
